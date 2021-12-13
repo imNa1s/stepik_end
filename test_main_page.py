@@ -1,4 +1,5 @@
 from .Page.main_page import Main_Page
+from .Page.login_page import LoginPage
 
 
 def test_guest_can_go_to_login_page(browser):
