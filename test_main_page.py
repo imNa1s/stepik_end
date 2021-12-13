@@ -2,7 +2,7 @@ from .Page.main_page import Main_Page
 
 
 def test_guest_can_go_to_login_page(browser):
-    link = "http://selenium1py.pythonanywhere.com/"
+    link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer"
     Page = Main_Page(browser, link)
     Page.open()
     Page.go_to_login_page()
