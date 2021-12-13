@@ -28,7 +28,9 @@ class Product_NY(BasePage, ProdNYLocators):
             print("No second alert presented")
 
     def check_basket_equal_by_name(self):
-        assert self.BOOK_NAME == self.ADD_NAME_BOOK, "same"
+        assert self.is_element_present(*ProdNYLocators.BOOK_NAME) == self.is_element_present(
+            *ProdNYLocators.ADD_NAME_BOOK), "Must be same"
 
     def check_basket_equal_by_prise(self):
-        assert self.BOOK_PRICE == self.PRICE_ADD_BOOK, "same"
+        assert self.is_element_present(*ProdNYLocators.BOOK_PRICE) == self.is_element_present(
+            *ProdNYLocators.PRICE_ADD_BOOK), "Must be same"
