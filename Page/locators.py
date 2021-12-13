@@ -13,3 +13,8 @@ class LoginPageLocators:
 
 class ProdNYLocators:
     FIND_BASKET = (By.CSS_SELECTOR, ".btn-add-to-basket")
+    BOOK_NAME = (By.CSS_SELECTOR, '.row h1')
+    ADD_NAME_BOOK = (By.CSS_SELECTOR, ".alertinner>strong")
+    BOOK_PRICE = (By.CSS_SELECTOR, ".p.price_color")
+    PRICE_ADD_BOOK = (By.CSS_SELECTOR, ".alertinner p strong")
+
