@@ -1,10 +1,11 @@
 from selenium.common.exceptions import NoAlertPresentException
 from .base_page import BasePage
 from .locators import ProdNYLocators
+
 import math
 
 
-class Product_NY(BasePage):
+class Product_NY(BasePage, ProdNYLocators):
     def add_to_basket(self):
         basket_add = self.browser.find_element(*ProdNYLocators.FIND_BASKET)
         basket_add.click()
@@ -25,3 +26,9 @@ class Product_NY(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def check_basket_equal_by_name(self):
+        assert self.BOOK_NAME == self.ADD_NAME_BOOK, "same"
+
+    def check_basket_equal_by_prise(self):
+        assert self.BOOK_PRICE == self.PRICE_ADD_BOOK, "same"
