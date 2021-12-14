@@ -1,9 +1,11 @@
+import pytest
 from .Page.product_page import Product_NY
 import time
 
 
-def test_guest_can_add_product_to_basket(browser):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+@pytest.mark.parametrize('end', ["0", "1", "3", "4",  "5", "6", pytest.param("7", marks=pytest.mark.xfail), "8", "9"])
+def test_guest_can_add_product_to_basket(browser, end):
+    link = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{end}'
     Page = Product_NY(browser, link)
     Page.open()
     Page.try_find_add()
