@@ -19,3 +19,7 @@ class ProdNYLocators:
     PRICE_ADD_BOOK = (By.CLASS_NAME, ".alertinner p strong")
     SUCCESS_MSG = (By.CSS_SELECTOR, ".alert-success")
 
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
