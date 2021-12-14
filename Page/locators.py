@@ -17,4 +17,5 @@ class ProdNYLocators:
     ADD_NAME_BOOK = (By.CSS_SELECTOR, ".alertinner>strong")
     BOOK_PRICE = (By.CSS_SELECTOR, ".p.price_color")
     PRICE_ADD_BOOK = (By.CLASS_NAME, ".alertinner p strong")
+    SUCCESS_MSG = (By.CSS_SELECTOR, ".alert-success")
 
