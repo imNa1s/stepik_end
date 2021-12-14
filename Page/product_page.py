@@ -34,3 +34,10 @@ class Product_NY(BasePage, ProdNYLocators):
     def check_basket_equal_by_prise(self):
         assert self.is_element_present(*ProdNYLocators.BOOK_PRICE) == self.is_element_present(
             *ProdNYLocators.PRICE_ADD_BOOK), "Must be same"
+
+    def check_add_book_in_basket(self):
+        assert self.is_not_element_present(*ProdNYLocators.SUCCESS_MSG), "book add"
+
+    def check_disappear_msg(self):
+        assert self.is_disappeared(*ProdNYLocators.SUCCESS_MSG), "he is not disappear"
+
